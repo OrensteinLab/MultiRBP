@@ -1,13 +1,13 @@
-# Multi-Task
-Multi-Task net is a deep learning model for predicting protein-RNA binding interactions.
+# MMultiRBP
+MultiRBP net is a deep learning model for predicting protein-RNA binding interactions.
 
 <br />
 <p align="center">
 
-  <h3 align="center">Multi-Task Net</h3>
+  <h3 align="center">MultiRBP Net</h3>
 
   <p>
-    Multi-Task net is a deep learning model for predicting protein-RNA binding interactions. This model was developed by Jonathan Karin and Hagai Michel as their bachelor degree final project, under the supervision of Dr.Yaron Orentein. <br />
+    MultiRBP net is a deep learning model for predicting protein-RNA binding interactions. This model was developed by Jonathan Karin and Hagai Michel as their bachelor degree final project, under the supervision of Dr.Yaron Orentein. <br />
   School of Electrical and Computer Engineering, Ben-Gurion University of the Negev,Beer-Sheva, Israel.
     <br />
   </p>
@@ -46,8 +46,8 @@ Deep learning-based method to predict RNA-binding intensity ofhundreds of protei
 
 Open folder and terminal for the project and write:
 ```sh
-git clone https://github.com/JonathanKarin/Multi-Task/
-cd Multi-Task
+git clone https://github.com/JonathanKarin/MultiRBP/
+cd MultiRBP
 ```
 
 ## Bring Data
