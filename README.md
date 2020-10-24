@@ -1,13 +1,13 @@
-# MMultiRBP
-MultiRBP net is a deep learning model for predicting protein-RNA binding interactions.
+# MultiRBP
+MultiRBP is a deep learning model for predicting protein-RNA binding interactions.
 
 <br />
 <p align="center">
 
-  <h3 align="center">MultiRBP Net</h3>
+  <h3 align="center">MultiRBP</h3>
 
   <p>
-    MultiRBP net is a deep learning model for predicting protein-RNA binding interactions. This model was developed by Jonathan Karin and Hagai Michel as their bachelor degree final project, under the supervision of Dr.Yaron Orentein. <br />
+    MultiRBP is a deep learning model for predicting protein-RNA binding interactions. This model was developed by Jonathan Karin and Hagai Michel as their bachelor degree final project, under the supervision of Dr.Yaron Orentein. <br />
   School of Electrical and Computer Engineering, Ben-Gurion University of the Negev,Beer-Sheva, Israel.
     <br />
   </p>
