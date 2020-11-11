@@ -99,13 +99,7 @@ def second_struct(seq):
             return ans
         if line[0] == '>':
             i += 6
-    print("not found!!!!!!!!!!!!!!!@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@")
-    print("not found!!!!!!!!!!!!!!!@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@")
-    print("not found!!!!!!!!!!!!!!!@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@")
-    print("not found!!!!!!!!!!!!!!!@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@")
-    print("not found!!!!!!!!!!!!!!!@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@")
-    print("not found!!!!!!!!!!!!!!!@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@")
-    print("not found!!!!!!!!!!!!!!!@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@")
+    print("not found!")
     return 0
 
 
@@ -140,7 +134,6 @@ def read_clip(path_pos, path_neg):
         i = i + 1
     return x, y
 
-
 def get_data1():
     data_path = "../data/norm_data.txt"
 
@@ -156,7 +149,6 @@ def get_data1():
     pre_test_for_nans = df[df['Probe_Set'] == 'SetB']
     for j in columns:
         if (i > 2):
-            # print(str(df[j].astype(float).mean()))
             list_of_nans.append(find_nans(pre_test_for_nans[j]))
             df[j] = df[j].astype(float).fillna(df[j].astype(float).mean())
             df[j] = df[j].clip(lower=-100, upper=df[j].quantile(0.995))
@@ -243,11 +235,6 @@ def find_nans(col_of_data):
 
 def get_data():
     data_path = "../data/norm_data.txt"
-    # f = open(data_path, "r")
-    # word_counts = Counter(f.read().split())
-    # set_a_size = word_counts.get('SetA')
-    # set_b_size = word_counts.get('SetB')
-    # f.close()
     f = open(data_path, "r")
     i = 0
     j = 0
@@ -458,8 +445,6 @@ def save_data_41():
     Test = df[df['Probe_Set'] == 'SetB']
     Test = Test.drop(['Probe_Set', 'Probe_ID'], axis=1)
     columns = list(df)
-    # for i in columns:
-    #   print(df[i].describe())
     x_shaped_a = np.zeros((120326, 41, 9))  # 120326
     x_shaped_b = np.zeros((121031, 41, 9))  # 121031
     y_shaped_a = np.zeros((120326, 244))  # 120326
@@ -540,10 +525,10 @@ def get_data_saved_41x9():
     y_shaped_a = np.load('y_shaped_a.npy')  # load
     y_shaped_b = np.load('y_shaped_b.npy')  # load
     params_dict = {
-        "dropout": 0.382233801349954,
+        "dropout": 0.362233801349954,
         "epochs": 78,
         "batch" : 4096,
-        "regu": 5.6215002041656515e-06,
+        "regu": 5.7215002041656515e-06,
         "hidden1" : 6029,
         "hidden2" : 1168,
         "filters1" : 2376,
@@ -599,10 +584,10 @@ def get_data75():
         y_shaped_b[i] = row[1:]
         i = i + 1
     params_dict = {
-        "dropout": 0.382233801349954,
+        "dropout": 0.362233801349954,
         "epochs": 78,
         "batch" : 4096,
-        "regu": 5.6215002041656515e-06,
+        "regu": 5.7215002041656515e-06,
         "hidden1" : 6029,
         "hidden2" : 1168,
         "filters1" : 2376,
@@ -637,9 +622,7 @@ def read_eclip_75(path_pos, path_neg):
             seq=seq[skip:skip+75]
             pos_list.append(seq)
         else:
-            print(line)
-            print("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$")
-            print("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$")
+            print("error")
     neg_list = []
     f_neg = open(path_neg)
     i = 0
@@ -660,9 +643,7 @@ def read_eclip_75(path_pos, path_neg):
             seq=seq[skip:skip+75]
             neg_list.append(seq)
         else:
-            print(line)
-            print("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$")
-            print("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$")
+            print("error")
 
     x = np.zeros((len(neg_list) + len(pos_list), 75, 4))
     y = np.zeros((len(neg_list) + len(pos_list)))
