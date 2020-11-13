@@ -46,7 +46,7 @@ Deep learning-based method to predict RNA-binding intensity ofhundreds of protei
 
 Open folder and terminal for the project and write:
 ```sh
-git clone https://github.com/JonathanKarin/MultiRBP/
+git clone https://github.com/OrensteinLab/MultiRBP
 cd MultiRBP
 ```
 
