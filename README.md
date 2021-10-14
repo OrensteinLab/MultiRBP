@@ -72,8 +72,8 @@ For achieving the best results in predicting in vivo binding, train the model wi
 python in_vivo/train_75.py
 ```
 download the in vivo data:<br />
-[Link](https://drive.google.com/file/d/1jdDiR9LyWplZ7oFuccav9HlPngged9aH/view?usp=sharing)
-[Link](https://drive.google.com/file/d/18Y2x4b2A-obJjMwbuhLUsAQwA1_2pOXS/view?usp=sharing)
+[Positive sequences](https://drive.google.com/file/d/1MpaDr5QHREMsMGzqS9bv4QzxcVWPgyFz/view?usp=sharing)
+[Negative sequences](https://drive.google.com/file/d/18Y2x4b2A-obJjMwbuhLUsAQwA1_2pOXS/view?usp=sharing)
 unzip the files to 'eclip' folder.
 ```sh
 mkdir in_vivo/eclip/
